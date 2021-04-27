@@ -1,0 +1,78 @@
+
+<div class="row py-5 color w-100 no-gutters">
+    <div class="container-fluid">
+        <div class="col-md-12 " *ngIf="user">
+            <!-- Profile widget -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <div class="px-4 pt-0 pb-4 cover">
+                    <div class="media align-items-end profile-head ">
+                        <div class="profile mr-3 ">
+                            <img src="{{user.photo}}" alt="..." width="130" class="rounded mb-2 img-thumbnail " />
+                        </div>
+                        <div class="media-body mb-5 text-white">
+                            <h3 class="mt-0 mb-0" style="color: rgb(0, 0, 0);">{{user.fName}} {{user.lName}}</h3>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="cover p-4 d-flex justify-content-center justify-content-md-end text-center ">
+                    <ul class="list-inline mb-0 ">
+                        <li class="list-inline-item mt-5 animate__animated animate__fadeInRight " *ngIf='mealsLen'>
+                            <h2 class="b  p-3  " style="color: rgb(0, 0, 0);">Meals <i class="fas fa-heart text-color"
+                                    style="color: rgb(0, 0, 0);"></i></h2>
+                            <h2 class="font-weight-bold mb-0 text-color">{{mealsLen}}
+                            </h2>
+                        </li>
+                        <li class="list-inline-item mt-5 ">
+                            <h2 class="b  p-3  " style="color: rgb(0, 0, 0);">Age</h2>
+                            <h2 class="font-weight-bold mb-0 text-color">{{user.age}}</h2>
+                        </li>
+                        <li class="list-inline-item mt-5 ">
+                            <h2 class="b p-3 " style="color: rgb(0, 0, 0);">weight</h2>
+                            <h2 class="font-weight-bold mb-0 text-color">{{user.weight}}</h2>
+                        </li>
+                        <li class="list-inline-item mt-5">
+                            <h2 class="b p-3 " style="color: rgb(0, 0, 0);">Height</h2>
+                            <h2 class="font-weight-bold mb-0 text-color">{{user.height}}</h2>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="py-4 px-4" >
+                    <h3 class="mb-3 text-center " style="font-family: 'Fugaz One', cursive;;">Favorite Meals</h3>
+                    <h2 class="text-center" *ngIf="mealsLen ==0">You dont have any favorite meals !
+                    </h2>
+                    <div class="text-center">
+                        <div class="spinner-border text-dark text-center " role="status" *ngIf="sipnner">
+                            <span class="sr-only text-center">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col mb-4 p-3 " *ngFor="let recipe of meals">
+
+                            <div class="card h-100 recipe-card">
+                                <a class="recipe-link" [routerLink]="['/recipeInfo', recipe.id]">
+                                    <figure class="img-wrapper position-relative  ">
+                                        <div
+                                            class="img-overlay d-flex align-items-center justify-content-center rounded">
+                                            <h2 class="text-white">View Details</h2>
+                                        </div>
+                                        <img [src]="recipe.image" [alt]='recipe.title' class="card-img-top">
+                                    </figure>
+                                </a>
+                                <div class="card-body p-1 pt-2 ">
+                                    <h2 class="card-title text-center  ">{{recipe.title}} <i
+                                            class="fas fa-heart text-color  " style="color: rgb(0, 0, 0);"
+                                            (click)="removeMeal(recipe) "></i> </h2>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

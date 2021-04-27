@@ -1,0 +1,42 @@
+.footer{
+    background-color: rgba(40, 167, 69, 0.9);
+    border-top: 2px solid  var(--base);
+    color: #fff;
+    height: 200px;
+}
+p{
+    font-size:1rem;
+    letter-spacing: 0.1rem;
+}
+span{
+    color: var(--base);
+    letter-spacing: 0.2rem;
+    font-family: 'Original Surfer', cursive;
+
+}
+ul{
+    list-style-type: none ;
+}
+li{
+    display: inline;
+    padding: 0.5rem;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0.1rem;
+}
+/* media query */
+@media(max-width:990px){
+    p{
+        font-size:0.7rem;
+        text-align: center;
+    }
+    span{
+        font-size: 0.7rem;
+    }
+    .footer{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

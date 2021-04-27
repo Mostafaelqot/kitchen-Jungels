@@ -1,0 +1,20 @@
+.input-shape{
+    width: 400px;
+    height: 45px;
+    border: solid 2px rgb(192, 192, 192);
+    background-color: rgb(245, 245, 245);
+}
+.color{
+    border: solid 2px green;
+    color: green;
+}
+.color-sec {
+  background-color: #FFFADD;
+}
+.dontShow{
+  display: none !important;
+}
+.imgPiker{
+width: 100px;
+height: 100px;
+}
