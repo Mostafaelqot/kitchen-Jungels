@@ -1,5 +1,46 @@
 # KitchenJungle
 
+By : 
+Mostafa Masoud Elqot
+Mohamed Mahmoud Abdelkader
+Nourhan Soliman Elsharkawy
+Ghada Magdy Elfeqy
+
+### About
+
+This website guides people for eating healthy foods by providing healthy food recipes
+and delicious tasts at the same time. Because people leave healthy diets for its lack of
+good tasts. And it works to reduce diseases and producing young with a good health.
+It also redirects people how to keep going on diets
+
+### Technologies
+
+- Angular, Angular matirals, 
+- Ngrx, Guard
+- Firebase, React-firebase-hooks, Firebase-ui
+-  Facebook Third-party Authentication
+- Context API
+- Bootstrap
+- Material UI
+- Styled Components
+- aniamte.css
+
+## Installation
+
+
+
+Install the dependencies and devDependencies and start the application.
+
+
+git clone https://github.com/Mostafaelqot/kitche-jugles.git
+npm i
+npm start
+```
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
 ## Development server

@@ -61,6 +61,7 @@ this.photo = event
         this.firebaseError = error.message
       })
     } else if (this.profilekey) {
+      console.log("profile info")
       const Username = formData.value.Username
       const Weight = formData.value.Weight
       const Height = formData.value.Height
